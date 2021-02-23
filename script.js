@@ -8,13 +8,13 @@ document.getElementById("btn2").onclick = function () {
 };
 
 //Generate Password Button
-function getPassword () {
+function getPassword() {
   const chars = "0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!@#$%^&*()<>:;/?";
   let passwordLength = 14;
   let password = "";
-  for ( let i=0; i<passwordLength; i++ ) {
-    let randInt = Math.floor(Math.random()* chars.length);
-    password += chars.substring(randInt, randInt+1);
+  for (let i = 0; i < passwordLength; i++) {
+    let randInt = Math.floor(Math.random() * chars.length);
+    password += chars.substring(randInt, randInt + 1);
   }
 
   document.getElementById("Password").value = password;
@@ -29,7 +29,7 @@ function copyPassword() {
 
   document.execCommand("copy");
 
-  alert('Your password is copied:' +'  '+  copiedPass.value);
+  alert('Your password is copied:' + '  ' + copiedPass.value);
 
 
 }
